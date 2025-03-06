@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <link href="/static/modify_recipe.css" rel="stylesheet">
+    <div class="modify-recipe-container">
+        <form action="/modify_recipe/{{ recettes[0].id }}" method="post" enctype="multipart/form-data" class="recipe-form">
+            <div class="recipe-image-container">
+                <img class="recipe-image" name="image_url" src="{{ url_for('static', filename=recettes[0].photo_url) }}" width="250" height="250"></img>
+                <h3>Change picture</h3>
+                <input type="hidden" name="image_url" value="{{ recettes[0].photo_url }}">
+                <input type="file" name="image" accept="image/*">
+                <h1 class="recipe-name">{{ recettes[0].nom }}</h1>
+                <textarea class="textarea-description" name="nom" required>{{ recettes[0].nom }}</textarea>
+                <h2>Recipe shared by : {{ recettes[0].username }}</h2>
+                <div class="form-section">
+                    <h2>Description</h2>
+                    <textarea class="textarea-description" name="descript" required>{{ recettes[0].description }}</textarea>
+                </div>
+                <div class="form-section">
+                    <h3>Category</h3>
+                    <select class="select-categorie" name="categorie" required>
+                        <option value="Culinary Arts">Culinary Arts</option>
+                        <option value="Bakery">Bakery</option>
+                        <option value="Pastry">Pastry</option>
+                    </select>
+                </div>
+                <div class="form-section">
+                    <h3>Difficulty</h3>
+                    <textarea class="textarea-difficulte" name="difficulte" required>{{ recettes[0].difficulte }}</textarea>
+                </div>
+                <div class="form-section">
+                    <h3>Servings</h3>
+                    <input class="input-portions" type="number" required value="{{ recettes[0].portions }}" name="portions" step="1" min="1">
+                </div>
+                <div class="form-section">
+                    <h2>Ingredients</h2>
+                    <div id="ingredients" class="ingredients-container">
+                        {% for ingredient in recettes[0].ingredients.split(';') %}
+                            <textarea class="textarea-ingredient ingredient" name="ingredient{{ loop.index }}" placeholder="Ingrédient {{ loop.index }}">{{ ingredient }}</textarea>
+                        {% endfor %}
+                    </div>
+                    <button type="button" onclick="ajouterEtape_modify('ingredient')">Add an ingredient</button>
+                    <button type="button" onclick="supprimerEtape_modify('ingredient')">Delete an ingredient</button>
+                </div>
+                <div class="form-section">
+                    <h3>Preparation time</h3>
+                    <input class="input-temps" type="number" required value="{{ recettes[0].temps_preparation }}" name="temps_preparation" step="1" min="1">
+                </div>
+                <div class="form-section">
+                    <h3>Cooking time</h3>
+                    <input class="input-temps" type="number" required value="{{ recettes[0].temps_cuisson }}" name="temps_cuisson" step="1" min="1">
+                </div>
+                <div class="form-section">
+                    <h2>Instructions</h2>
+                    <div id="instructions" class="instructions-container">
+                        {% for instruction in recettes[0].instructions.split(';') %}
+                            <textarea class="textarea-instruction instruction" name="instruction{{ loop.index }}" placeholder="Étape {{ loop.index }}">{{ instruction }}</textarea>
+                        {% endfor %}
+                    </div>
+                    <button type="button" onclick="ajouterEtape_modify('instruction')">Add an instruction</button>
+                    <button type="button" onclick="supprimerEtape_modify('instruction')">Delete an instruction</button>
+                </div>
+                <input class="submit-button" type="submit" value="Modify recipe">
+            </form>
+        </div>
+    </div>
+
+<!-- First version of html file before css style -->
+
+<!-- <form action="/modify_recipe/{{ recettes[0].id }}" method="post" enctype="multipart/form-data">
+        <img name="image_url" src="{{ url_for('static', filename=recettes[0].photo_url) }}" width="250" height="250"></img>
+        <h3>Changer la photo</h3>
+        <input type="hidden" name="image_url" value="{{ recettes[0].photo_url }}">
+        <input type="file" name="image" accept="image/*">
+
+        <h1>{{ recettes[0].nom }}</h1>
+        <textarea name="nom" required>{{ recettes[0].nom }}</textarea>
+        <h2>Recette partage par : {{ recettes[0].username }}</h2>
+            <h2>Description</h2>
+            <p>{{ recettes[0].description }}</p>
+        <textarea name="descript" required>{{ recettes[0].description }}</textarea>
+        <h3>Categorie</h3>
+            <p>{{ recettes[0].categorie }}</p>
+        <select name="categorie" required>
+            <option value="Culinary Arts">Culinary Arts</option>
+            <option value="Bakery">Bakery</option>
+            <option value="Pastry">Pastry</option>
+        </select>
+        <h3>Difficulte</h3>
+        <p>{{ recettes[0].difficulte }}</p>
+        <textarea name="difficulte" required>{{ recettes[0].difficulte }}</textarea>
+        <h3>Portions</h3>
+            <p>{{ recettes[0].portions }} portions</p>
+        <input type="number" required value="{{ recettes[0].portions }}" name="portions" step="1" min="1" required></input>
+        <h2>Ingredients</h2>
+        <div id="ingredients">
+            {% for ingredient in recettes[0].ingredients.split(';') %}
+                <textarea class="ingredient" name="ingredient{{ loop.index }}" placeholder="Ingrédient {{ loop.index }}">{{ ingredient }}</textarea>
+            {% endfor %}
+        </div>
+        <button type="button" onclick="ajouterEtape_modify('ingredient')">Ajouter un ingrédient</button>
+        <button type="button" onclick="supprimerEtape_modify('ingredient')">Supprimer un ingrédient</button>
+        <h3>Temps de preparation</h3>
+        <input type="number" required value="{{ recettes[0].temps_preparation }}" name="temps_preparation" step="1" min="1" required></input>
+        <h3>Temps de cuisson</h3>
+        <input type="number" required value="{{ recettes[0].temps_cuisson }}" name="temps_cuisson" step="1" min="1" required></input>
+        <h2>Instructions</h2>
+        <div id="instructions">
+            {% for instruction in recettes[0].instructions.split(';') %}
+                <textarea class="instruction" name="instruction{{ loop.index }}" placeholder="Étape {{ loop.index }}">{{ instruction }}</textarea>
+            {% endfor %}
+        </div>
+        <button type="button" onclick="ajouterEtape_modify('instruction')">Ajouter une étape</button>
+        <button type="button" onclick="supprimerEtape_modify('instruction')">Supprimer une étape</button>
+
+        <input type="submit" value="Modifier la recette">
+    </form> -->
+
+{% endblock %}

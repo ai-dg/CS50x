@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <link href="/static/profile.css" rel="stylesheet">
+    <div class="profile-container">
+        {% if session["name"] %}
+            <h2>You are logged in as {{ session["name"] }}.</h2>
+            <a href="/logout" class="logout-button">Logout</a>
+            <h1>Your Recipes:</h1>
+            <table class="recipes-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Difficult level</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for recette in recettes %}
+                        <tr>
+                            <td><a href="detail?id={{ recette["id"] }}">{{ recette.nom }}</a></td>
+                            <td>{{ recette.difficulte }}</td>
+                            <td>
+                                <form action="/modify_recipe/{{ recette.id }}">
+                                    <input type="submit" value="Modify">
+                                </form>
+                                <form action="/delete_recette" method="post">
+                                    <input name="id" type="hidden" value="{{ recette.id }}">
+                                    <input type="submit" value="Deregister">
+                                </form>
+
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <h3>Update Your Information:</h3>
+            <form action="/update_info" method="post" class="update-form">
+                <h4>Email:</h4>
+                <input type="email" required value="{{ user_info['email'] }}" name="email" placeholder="{{ user_info['email'] }}">
+                <h4>First name:</h4>
+                <input type="text" required value="{{ user_info['first_name'] }}" name="first_name" placeholder="{{ user_info['first_name'] }}">
+                <h4>Last name:</h4>
+                <input type="text" required value="{{ user_info['last_name'] }}" name="last_name" placeholder="{{ user_info['last_name'] }}">
+                <input type="submit" value="Update">
+            </form>
+        {% else %}
+            <p>Vous n'êtes pas connecté. <a href="/login">Se connecter</a>.</p>
+        {% endif %}
+    </div>
+
+<!-- First version of html file before css style -->
+
+<!-- {% if session["name"] %}
+        <h2>Vous êtes connecté en tant que {{ session["name"] }}.</h2>
+        <a href="/logout">Se déconnecter</a>
+
+        <h1>Your Recipes:</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Difficult level</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for recette in recettes %}
+                <tr>
+                    <td><a href="detail?id={{ recette["id"] }}">{{ recette.nom }}</a></td>
+                    <td>{{ recette.difficulte }}</td>
+                    <td>
+                        <form action="/modify_recipe/{{ recette.id }}">
+                            <input type="submit" value="Modify">
+                        </form>
+                        <form action="/delete_recette" method="post">
+                            <input name="id" type="hidden" value="{{ recette.id }}">
+                            <input type="submit" value="Deregister">
+                        </form>
+
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h3>Update Your Information:</h3>
+        <form action="/update_info" method="post">
+            <input type="email" required value="{{ user_info['email'] }}" name="email" placeholder="{{ user_info['email'] }}">
+            <input type="text" required value="{{ user_info['first_name'] }}" name="first_name" placeholder="{{ user_info['first_name'] }}" >
+            <input type="text" required value="{{ user_info['last_name'] }}" name="last_name" placeholder="{{ user_info['last_name'] }}" >
+            <input type="submit" value="Update">
+        </form>
+    {% else %}
+        <p>Vous n'êtes pas connecté. <a href="/login">Se connecter</a>.</p>
+    {% endif %} -->
+
+{% endblock %}

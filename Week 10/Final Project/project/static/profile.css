@@ -1,0 +1,61 @@
+.profile-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.logout-button {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #f04f5a;
+    text-decoration: none;
+}
+
+.logout-button:hover {
+    text-decoration: underline;
+}
+
+.recipes-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.recipes-table th,
+.recipes-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.recipes-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.update-form {
+    margin-top: 20px;
+}
+
+.update-form input[type="email"],
+.update-form input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.update-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #f04f5a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.update-form input[type="submit"]:hover {
+    background-color: #c83e47;
+}

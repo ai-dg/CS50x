@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <link href="/static/category.css" rel="stylesheet">
+
+    <div class="category-container">
+        <h1 class="category-title">Category recipes "{{ categorie }}"</h1>
+        <ul class="category-list">
+            {% for recette in recettes %}
+                <li class="category-item"><a class="category-link" href="/detail?id={{ recette['id'] }}">{{ recette.nom }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+<!-- First version of html file before css style -->
+
+<!-- <h1>Category recipes "{{ categorie }}"</h1>
+    <ul>
+        {% for recette in recettes %}
+            <li><a href="/detail?id={{ recette["id"] }}">{{ recette.nom }}</a></li>
+        {% endfor %}
+    </ul> -->
+
+{% endblock %}

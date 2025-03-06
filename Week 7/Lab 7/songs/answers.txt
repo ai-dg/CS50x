@@ -1,0 +1,1 @@
+In order to identify the characteristics of the songs of the year 2018, it would be advisable to first calculate the average of the main characteristics (danceability, energy, loudness, speechiness and valence) of the most popular songs. And then make a comparison with the average previously calculated in the database songs.db.

@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <link href="/static/send_mail.css" rel="stylesheet">
+    <div class="password-recovery-container">
+        <h1 class="password-recovery-title">Password Recovery</h1>
+        <form method="post" class="password-recovery-form">
+            <div class="form-group">
+                <label for="first_name">First name:</label>
+                <input type="text" id="first_name" name="first_name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="last_name">Last name:</label>
+                <input type="text" id="last_name" name="last_name" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Recover" class="submit-button">
+            </div>
+        </form>
+    </div>
+
+<!-- First version of html file before css style -->
+
+<!-- <h1>Récupération de Mot de Passe</h1>
+    <form method="post">
+        <label for="first_name">Prénom:</label><br>
+        <input type="text" id="first_name" name="first_name" required><br>
+
+        <label for="last_name">Nom:</label><br>
+        <input type="text" id="last_name" name="last_name" required><br>
+        <p></p>
+        <input type="submit" value="Récupérer">
+    </form> -->
+
+{% endblock %}

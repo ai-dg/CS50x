@@ -1,0 +1,5 @@
+<ul>
+    {% for show in shows %}
+        <li><a href="/detail?id={{ show["id"] }}">{{ show["nom"] }}</a></li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <link href="/static/detail.css" rel="stylesheet">
+    <div class="recipe-detail-container">
+        {% if recettes %}
+            <div class="recipe-image-container">
+                <img class="recipe-image" src="{{ url_for('static', filename=recettes[0].photo_url) }}" alt="Photo de la recette">
+            </div>
+            <div class="recipe-content">
+                <h1 class="recipe-title">{{ recettes[0].nom }}</h1>
+                <h2 class="recipe-subtitle">Recipe shared by : {{ recettes[0].username }}</h2>
+                <div class="recipe-section">
+                    <h2>Description</h2>
+                    <p>{{ recettes[0].description }}</p>
+                </div>
+                <div class="recipe-section">
+                    <h3>Category</h3>
+                    <p>{{ recettes[0].categorie }}</p>
+                </div>
+                <div class="recipe-section">
+                    <h3>Difficulty</h3>
+                    <p>{{ recettes[0].difficulte }}</p>
+                </div>
+                <div class="recipe-section">
+                    <h3>Servings</h3>
+                    <p>{{ recettes[0].portions }} servings</p>
+                </div>
+                <div class="recipe-section">
+                    <h2>Ingredients</h2>
+                    <ol>
+                        {% for ingredient in recettes[0].ingredients.split(';') %}
+                            <li>{{ ingredient }}</li>
+                        {% endfor %}
+                    </ol>
+                </div>
+                <div class="recipe-section">
+                    <h3>Preparation time</h3>
+                    <p>{{ recettes[0].temps_preparation }} min</p>
+                </div>
+                <div class="recipe-section">
+                    <h3>Cooking time</h3>
+                    <p>{{ recettes[0].temps_cuisson }} min</p>
+                </div>
+                <div class="recipe-section">
+                    <h2>Instructions</h2>
+                    <ol>
+                        {% for instruction in recettes[0].instructions.split(';') %}
+                            <li>{{ instruction }}</li>
+                        {% endfor %}
+                    </ol>
+                </div>
+            </div>
+        {% else %}
+            <p class="recipe-not-found">Recipe not found.</p>
+        {% endif %}
+    </div>
+
+<!-- First version of html file before css style -->
+
+<!-- {% if recettes %}
+    <img src="{{ url_for('static', filename=recettes[0].photo_url) }}" width="250" height="250"></img>
+        <h1>{{ recettes[0].nom }}</h1>
+        <h2>Recette partage par : {{ recettes[0].username }}</h2>
+        <h2>Description</h2>
+        <p>{{ recettes[0].description }}</p>
+        <h3>Categorie</h3>
+        <p>{{ recettes[0].categorie }}</p>
+        <h3>Difficulte</h3>
+        <p>{{ recettes[0].difficulte }}</p>
+        <h3>Portions</h3>
+        <p>{{ recettes[0].portions }} portions</p>
+        <h2>Ingrédients</h2>
+        <ol>
+            {% for ingredient in recettes[0].ingredients.split(';') %}
+                <li>{{ ingredient }}</li>
+            {% endfor %}
+        </ol>
+        <h3>Temps de preparation</h3>
+        <p>{{ recettes[0].temps_preparation }} min</p>
+        <h3>Temps de cuisson</h3>
+        <p>{{ recettes[0].temps_cuisson }} min</p>
+        <h2>Instructions</h2>
+        <ol>
+            {% for instruction in recettes[0].instructions.split(';') %}
+                <li>{{ instruction }}</li>
+            {% endfor %}
+        </ol>
+    {% else %}
+        <p>Recette non trouvée.</p>
+    {% endif %} -->
+
+{% endblock %}

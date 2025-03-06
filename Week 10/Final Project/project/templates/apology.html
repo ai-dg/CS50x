@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <link href="/static/apology.css" rel="stylesheet">
+    <div class="apology-container">
+        <h1 class="apology-title">Error</h1>
+        <img class="style-img" src="{{ url_for('static', filename='images/error.png') }}"></img>
+        <p class="apology-message">{{ message }}</p>
+        <a href="/" class="home-button">Back to home page</a>
+    </div>
+
+{% endblock %}

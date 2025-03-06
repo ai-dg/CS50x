@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+
+{% block main %}
+
+    <link href="/static/index.css" rel="stylesheet">
+<!-- First version of html file before css style -->
+
+<!-- <button><a href="/signup">Sign up</a></button>
+    <button><a href='/login'>Login</a></button> -->
+<!-- <button><a href="/recettes/Culinary%20Arts">Culinary Arts</a></button>
+    <button><a href='/recettes/Bakery'>Bakery</a></button>
+    <button><a href='/recettes/Pastry'>Pastry</a></button> -->
+
+    <div class="box-culinary">
+        <a href='/recettes/Pastry'>
+            <img class="pastry-img" src="{{ url_for('static', filename='images/pastry.png') }}"></img>
+        </a>
+        <a href="/recettes/Culinary%20Arts">
+            <img class="culinary-img" src="{{ url_for('static', filename='images/culinary.png') }}"></img>
+        </a>
+        <a href='/recettes/Bakery'>
+            <img class="bakery-img" src="{{ url_for('static', filename='images/bakery.png') }}"></img>
+        </a>
+        <img class="logo-img" src="{{ url_for('static', filename='images/logo.png') }}"></img>
+        <div class="text-wrapper-myrecipes">MY RECIPES</div>
+        <div class="text-wrapper-bakery"> <a href='/recettes/Bakery'>BAKERY</a></div>
+        <div class="text-wrapper-culinary"><a href="/recettes/Culinary%20Arts">CULINARY<p style="text-align: center;">ARTS</p>
+        </div></a>
+        <div class="text-wrapper-pastry"><a href='/recettes/Pastry'>PASTRY</a></div>
+    </div>
+
+<!-- First version of html file before css style -->
+
+<!-- <div class="box">
+        <div class="pastry-font">
+            <div class="overlap-group"><div class="text-wrapper">PASTRY</div></div>
+        </div>
+    </div> -->
+<!--
+    <div class="box2">
+        <div class="bakery-font">
+            <div class="overlap-group"><div class="text-wrapper">BAKERY</div></div>
+        </div>
+    </div>
+    <div class="box3">
+         <div class="CULINARY-ARTS">
+            <div class="overlap-group">
+            <div class="text-wrapper">CULINARY</div>
+            <div class="div">ARTS</div>
+        </div>
+    </div> -->
+<!--
+    <div class="image"><img class="plan-de-travail" src="img/plan-de-travail-4-1.png" /></div>  -->
+
+{% endblock %}

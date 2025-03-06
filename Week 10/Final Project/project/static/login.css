@@ -1,0 +1,39 @@
+.login-container {
+    max-width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.login-form .login-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form .login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #f04f5a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-form .login-btn:hover {
+    background-color: #c83e47;
+}
+
+.recover-password-link {
+    color: #f04f5a;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+.recover-password-link:hover {
+    text-decoration: underline;
+}

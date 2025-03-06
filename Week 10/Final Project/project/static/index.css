@@ -1,0 +1,247 @@
+/*
+@media(max-height: 800px){
+    .pastry-img{
+        top: 10%;
+    }
+} */
+
+/* .box-pastry {
+    width: 314px;
+    height: 624px;
+} */
+
+.box-culinary {
+    position: relative;
+    width: 100%;
+    height: 51vw;
+}
+
+.box-culinary .pastry-img {
+    top: 12vw;
+    left: 85vw;
+    position: absolute;
+    width: 20vw;
+    height: 40vw;
+    display: block;
+    transform: translateX(-50%);
+}
+
+.box-culinary .culinary-img {
+    top: 12vw;
+    left: 50vw;
+    position: absolute;
+    width: 20vw;
+    height: 40vw;
+    display: block;
+    transform: translateX(-50%);
+}
+
+.box-culinary .bakery-img {
+    top: 12vw;
+    left: 15vw;
+    position: absolute;
+    width: 20vw;
+    height: 40vw;
+    display: block;
+    transform: translateX(-50%);
+}
+
+.box-culinary .logo-img {
+    top: -3vw;
+    left: 13vw;
+    position: absolute;
+    width: 12vw;
+    height: 13vw;
+    display: block;
+    transform: translateX(-50%);
+}
+
+.text-wrapper-myrecipes {
+    position: absolute;
+    top: -5%;
+    left: 25vw;
+    -webkit-text-stroke: 0.5vw #ff6b6b;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: transparent;
+    font-size: 10vw;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.text-wrapper-bakery a {
+    position: absolute;
+    top: 15vw;
+    left: 8.8vw;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 3vw;
+    letter-spacing: 0;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.text-wrapper-culinary a {
+    position: absolute;
+    top: 15vw;
+    left: 42.5vw;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 3vw;
+    letter-spacing: 0;
+    line-height: normal;
+    text-decoration: none !important;
+}
+
+.text-wrapper-pastry a {
+    position: absolute;
+    top: 15vw;
+    left: 79.5vw;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 3vw;
+    letter-spacing: 0;
+    line-height: normal;
+    text-decoration: none;
+}
+
+
+/*
+.box .pastry-font {
+    position: fixed;
+    width: 316px;
+    height: 624px;
+    top: 0;
+    left: 0;
+}
+
+.box .overlap-group {
+    position: relative;
+    width: 314px;
+    height: 624px;
+    background-image: url(./images/pastry.png);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+ */
+
+/*
+.image {
+    width: 220px;
+    height: 273px;
+}
+
+.image .plan-de-travail {
+    position: fixed;
+    width: 220px;
+    height: 262px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+} */
+
+
+/* .label {
+    width: 891px;
+    height: 182px;
+}
+
+.label .text-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    -webkit-text-stroke: 9px #ff6b6b;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: transparent;
+    font-size: 150px;
+    letter-spacing: 0;
+    line-height: normal;
+} */
+
+
+/*
+.box2 {
+    width: 315px;
+    height: 624px;
+}
+
+.box2 .bakery-font {
+    position: fixed;
+    width: 317px;
+    height: 624px;
+    top: 0;
+    left: 0;
+}
+
+.box2 .overlap-group {
+    position: relative;
+    width: 315px;
+    height: 624px;
+    background-image: url(./images/bakery.png);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.box2 .text-wrapper {
+    position: absolute;
+    top: 27px;
+    left: 61px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 50px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+
+.box3 {
+    width: 315px;
+    height: 656px;
+}
+
+.box3 .CULINARY-ARTS {
+    position: fixed;
+    width: 319px;
+    height: 656px;
+    top: 0;
+    left: 0;
+}
+
+.box3 .overlap-group {
+    position: relative;
+    width: 315px;
+    height: 656px;
+    background-image: url(./images/culinary.png);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.box3 .text-wrapper {
+    position: absolute;
+    top: 31px;
+    left: 32px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 50px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.box3 .div {
+    position: absolute;
+    top: 77px;
+    left: 93px;
+    font-family: "Inter-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 50px;
+    letter-spacing: 0;
+    line-height: normal;
+} */

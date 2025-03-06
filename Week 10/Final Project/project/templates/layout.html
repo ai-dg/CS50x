@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <link href="/static/main.css" rel="stylesheet">
+        <!-- Use of Bootstrap composants -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <div class="box"><img class="banner-font" src="{{ url_for('static', filename='images/BannerFont.png') }}"></div>
+        <div class="text-wrapper"><a href="/">MY RECIPES</a></div>
+        <img class="profile-button" src="{{ url_for('static', filename='images/rounded-rectangle-6.png') }}"></img>
+        <div class="dropdown">
+            <button class="dropbtn text-wrapper-2">PROFILE</button>
+            <div class="dropdown-content">
+                <a href="/profile">My profile</a>
+                {% if 'name' not in session %}
+                    <a href="/signup">Sign up</a>
+                    <a href="/login">Login</a>
+                {% else %}
+                    <a href="/logout">Logout</a>
+                {% endif %}
+
+            </div>
+        </div>
+        <div class="search-button">
+            <div class="overlap-group">
+                <img class="search-zone" src="{{ url_for('static', filename='images/search-zone.png') }}" />
+                <img class="trac" src="{{ url_for('static', filename='images/trac-5.png') }}" />
+                <img class="searchicon" src="{{ url_for('static', filename='images/searchicon.png') }}" onclick="submitToSearch2()" />
+            </div>
+        </div>
+        <div class="text-wrapper-3"><a href="/add_recipe">ADD</a></div>
+        <div class="text-wrapper-4"><a href="/add_recipe">+</a></div>
+        <img class="rounded-rectangle" src="{{ url_for('static', filename='images/rounded-rectangle-5.png') }}"></img>
+        <img class="add-button" src="{{ url_for('static', filename='images/trac-6.png') }}"></img>
+
+        <form id="searchForm" action="/search" method="get">
+            <input class="search-button2" name="q" autocomplete="off" autofocus placeholder="Query" type="search">
+            <ul class="search-list"></ul>
+        </form>
+
+        <!-- First version of html file before css style -->
+
+        <!-- <div class="text-wrapper-2"><a href="/profile" method="get" type="submit">PROFILE</a></div>
+    <form action="/add_recipe" method="get">
+        <input type="submit" value="Add recipe">
+    </form>
+    <form action="/profile" method="get">
+        <input type="submit" value="Profile">
+    </form>
+    <form action="/" method="get">
+        <input type="submit" value="Home">
+    </form> -->
+
+    </head>
+
+    <body>
+        {% block main %}{% endblock %}
+
+        <footer>
+            <div class="footer">
+                <div class="footer-wrapper">
+                    <div class="overlap-group">
+                        <img class="trac" src="{{ url_for('static', filename='images/trac-7.png') }}" />
+                        <img class="rectangle-copy" src="{{ url_for('static', filename='images/rounded-rectangle-7.png') }}" />
+                        <div class="address-rue">
+                            <div class="text-wrapper-a">Address</div>
+                            <div class="div">4 Rue du Dr Paul Brousse,</div>
+                            <div class="text-wrapper-b">75017, Paris, France</div>
+                            <div class="text-wrapper-c">staff@myrecipes.com</div>
+                        </div>
+                        <a href="https://www.facebook.com/Harvard/">
+                            <img class="facebook-icon" src="{{ url_for('static', filename='images/facebook_icon.png') }}" />
+                        </a>
+                        <a href="https://www.instagram.com/Harvard/">
+                            <img class="instagram-icon" src="{{ url_for('static', filename='images/instagram_icon.png') }}" />
+                        </a>
+                        <a href="https://twitter.com/Harvard">
+                            <img class="twitter-new-x-logo" src="{{ url_for('static', filename='images/x-logo.png') }}" />
+                        </a>
+                        <div class="text-wrapper-d">MyRecipes©All Rights Reserved</div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </footer>
+
+        <!-- Javascript codes in the scripts.js file -->
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+
+</html>

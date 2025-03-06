@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <link href="/static/signup.css" rel="stylesheet">
+    <div class="signup-container">
+        <form action="/signup" method="post" class="signup-form">
+            <input class="signup-input" autocomplete="off" autofocus name="username" placeholder="Username" type="text" required>
+            <input class="signup-input" autocomplete="off" name="password" placeholder="Password" type="password" required>
+            <input class="signup-input" autocomplete="off" name="confirmation" placeholder="Confirm password" type="password" required>
+            <input class="signup-btn" type="submit" value="Register">
+        </form>
+    </div>
+
+<!-- First version of html file before css style -->
+
+<!-- <form action="/signup" method="post">
+      <input autocomplete="off" autofocus name="username" placeholder="Username" type="text" required>
+      <p></p>
+      <input autocomplete="off" name="password" placeholder="Password" type="password" required>
+      <p></p>
+      <input autocomplete="off" name="confirmation" placeholder="Confirm password" type="password" required>
+      <p></p>
+      <input type="submit" value="Register">
+   </form> -->
+
+{% endblock %}

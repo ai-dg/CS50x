@@ -1,0 +1,46 @@
+.password-recovery-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.password-recovery-title {
+    color: #f04f5a;
+    margin-bottom: 30px;
+}
+
+.password-recovery-form .form-group {
+    margin-bottom: 20px;
+}
+
+.password-recovery-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.password-recovery-form input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.password-recovery-form .submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f04f5a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.password-recovery-form .submit-button:hover {
+    background-color: #c83e47;
+}

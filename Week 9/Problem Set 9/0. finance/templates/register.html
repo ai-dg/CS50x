@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+<!-- <link href="/static/signup.css" rel="stylesheet">
+    <div class="signup-container">
+        <form action="/signup" method="post" class="signup-form">
+            <input class="signup-input" autocomplete="off" autofocus name="username" placeholder="Username" type="text" required>
+            <input class="signup-input" autocomplete="off" name="password" placeholder="Password" type="password" required>
+            <input class="signup-input" autocomplete="off" name="confirmation" placeholder="Confirm password" type="password" required>
+            <input class="signup-btn" type="submit" value="Register">
+        </form>
+    </div> -->
+
+    <form action="/register" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text" required>
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password" required>
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="Password" type="password" required>
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+
+{% endblock %}

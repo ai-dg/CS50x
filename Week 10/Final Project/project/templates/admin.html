@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <link href="/static/admin.css" rel="stylesheet">
+    <div class="admin-container">
+        <h1 class="admin-title">Users</h1>
+        <div class="table-responsive">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                        <tr>
+                            <td>{{ user.username }}</td>
+                            <td>{{ user.email }}</td>
+                            <td>{{ user.first_name }}</td>
+                            <td>{{ user.last_name }}</td>
+                            <td>
+                                <form action="/deregister" method="post">
+                                    <input name="id" type="hidden" value="{{ user.username }}">
+                                    <input type="submit" value="Deregister" class="deregister-button">
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+<!-- First version of html file before css style -->
+
+<!-- <h1>Users</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Password</th>
+                <th>email</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.first_name }}</td>
+                <td>{{ user.last_name }}</td>
+                <td>
+                    <form action="/deregister" method="post">
+                        <input name="id" type="hidden" value="{{ user.username }}">
+                        <input type="submit" value="Deregister">
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table> -->
+
+{% endblock %}

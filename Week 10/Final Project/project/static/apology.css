@@ -1,0 +1,39 @@
+.apology-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.apology-title {
+    color: #f04f5a;
+    margin-bottom: 20px;
+}
+
+.apology-message {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f04f5a;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.home-button:hover {
+    background-color: #c83e47;
+}
+
+.apology-container .style-img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px;
+}

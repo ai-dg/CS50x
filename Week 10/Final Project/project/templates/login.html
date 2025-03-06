@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <link href="/static/login.css" rel="stylesheet">
+    <div class="login-container">
+        <form action="/login" method="post" class="login-form">
+            <input class="login-input" autocomplete="off" autofocus name="name" placeholder="Name" type="text" required>
+            <input class="login-input" autocomplete="off" name="password" placeholder="Password" type="password" required>
+            <input class="login-btn" type="submit" value="Log In">
+        </form>
+        <a href="/send_email" class="recover-password-link">Recover password</a>
+    </div>
+
+<!-- First version of html file before css style -->
+
+<!-- <form action="/login" method="post">
+        <input autocomplete="off" autofocus name="name" placeholder="Name" type="text" required>
+        <p></p>
+        <input autocomplete="off" autofocus name="password" placeholder="Password" type="password"  type="text" required>
+        <p></p>
+        <input type="submit" value="Log In">
+     </form>
+   </form>
+   <form action="/send_email" method="get">
+     <input type="submit" value="Recover password">
+     </form> -->
+<!-- <form action="/send_mail" method="post">
+      <input type="submit" value="Forgot password">
+ </form> -->
+
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <link href="/static/add_recipe.css" rel="stylesheet">
+    <div class="add-recipe-container">
+        <h3>Add a new recipe:</h3>
+        <form action="/add_recipe" method="post" enctype="multipart/form-data" class="recipe-form">
+            <input type="text" name="nom_recette" placeholder="Recipe name" required>
+            <textarea name="description" placeholder="Description" required></textarea>
+            <textarea name="difficulte" placeholder="Difficulty" required></textarea>
+            <input type="number" name="temps_preparation" placeholder="Preparation time in minutes" step="1" min="1" required>
+            <input type="number" name="temps_cuisson" placeholder="Cooking time in minutes" step="1" min="1" required>
+            <input type="number" name="portions" placeholder="Servings per person" step="1" min="1" required>
+            <select name="categorie" required>
+                <option value="" disabled selected>Category</option>
+                <option value="Culinary Arts">Culinary Arts</option>
+                <option value="Bakery">Bakery</option>
+                <option value="Pastry">Pastry</option>
+            </select>
+            <input type="file" name="image" accept="image/*">
+            <div id="instructions">
+                <textarea name="instruction1" placeholder="Instruction 1"></textarea>
+            </div>
+            <button type="button" onclick="ajouterEtape_add()">Add an instruction</button>
+            <button type="button" onclick="supprimerEtape_add()">Delete an instruction</button>
+
+            <div id="ingredients">
+                <textarea name="ingredient1" placeholder="Ingredient 1"></textarea>
+            </div>
+            <button type="button" onclick="ajouterEtape2_add()">Add an ingredient</button>
+            <button type="button" onclick="supprimerIngredient_add()">Delete an ingredient</button>
+
+            <input type="submit" value="Add recipe">
+        </form>
+    </div>
+
+<!-- First version of html file before css style -->
+
+<!-- <h3>Ajouter une nouvelle recette :</h3>
+    <form action="/add_recipe" method="post" enctype="multipart/form-data">
+        <input type="text" name="nom_recette" placeholder="Nom de la recette" required>
+        <input type="text" name="description" placeholder="Description" required></input>
+        <input type="number" name="temps_preparation" placeholder="Temps preparation en minutes" step="1" min ="1" required></input>
+        <input type="number" name="temps_cuisson" placeholder="Temps de cuisson en minutes" step="1" min ="1" required></input>
+        <input type="number" name="portions" placeholder="Portions par personne" step="1" min ="1" required></input>
+        <input type="text" name="difficulte" placeholder="Difficulte" required></input>
+        <select name="categorie" required>
+            <option value="Culinary Arts">Culinary Arts</option>
+            <option value="Bakery">Bakery</option>
+            <option value="Pastry">Pastry</option>
+        </select>
+        <input type="file" name="image" accept="image/*">
+        <div id="instructions">
+            <textarea name="instruction1" placeholder="Étape 1"></textarea>
+        </div>
+        <button type="button" onclick="ajouterEtape_add()">Ajouter une étape</button>
+        <button type="button" onclick="supprimerEtape_add()">Supprimer une étape</button>
+        <div id="ingredients">
+            <textarea name="ingredient1" placeholder="Ingredient 1"></textarea>
+        </div>
+        <button type="button" onclick="ajouterEtape2_add()">Ajouter un ingredient</button>
+        <button type="button" onclick="supprimerIngredient_add()">Supprimer un ingredient</button>
+        <input type="submit" value="Ajouter la recette">
+    </form> -->
+
+{% endblock %}

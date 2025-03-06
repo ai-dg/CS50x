@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <link href="{{ url_for('static', filename='search.css') }}" rel="stylesheet">
+
+    <div class="search-results-container">
+        <ul class="search-results-list">
+            {% for show in shows %}
+                <li class="search-result-item"><a href="/detail?id={{ show.id }}">{{ show.nom }}</a></li>
+            {% else %}
+                <li>No results found.</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    {% if total_pages > 1 %}
+        <div class="pagination">
+            {% for page_num in range(1, total_pages + 1) %}
+                <a class="page-link" href="{{ url_for('search2', q=q, page=page_num) }}">{{ page_num }}</a>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+{% endblock %}
