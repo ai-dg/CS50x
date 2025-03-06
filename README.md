@@ -95,10 +95,9 @@ pip install flask
 pip install flask_mail
 pip install flask_session
 pip install cs50
+cd Week\ 10/Final\ Project/project/
 flask run in the folder /Week 10/Final Project/project
 ```
-
-
 
 ## 📜 License
 This repository contains my personal solutions and projects from CS50x.  
