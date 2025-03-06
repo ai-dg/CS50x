@@ -1,6 +1,6 @@
-# CS50x (2023) - Introduction to Computer Science
+# CS50x - Introduction to Computer Science
 
-<img src="https://github.com/user-attachments/assets/1cb2d95b-e43a-42a8-9dbc-2139700dae25" width="500">
+<img src="https://cs50.harvard.edu/images/cs50x.png" width="500">
 
 ![Course Completed](https://img.shields.io/badge/Completed-✅-brightgreen)  
 📌 **Harvard University's CS50x - Intro to Computer Science**  
@@ -29,9 +29,65 @@ Through hands-on problem sets and projects, students develop strong problem-solv
 | **Python & SQL** | Object-oriented programming, database queries |
 | **Web Development** | Flask, HTML, CSS, JavaScript |
 
-### ■ **Final Project**
-For my final project, I developed **[Project Name]**, which is a **[brief description of what your project does]**.  
+## ▌ Final Project: MyRecipes Web Application
 
-### 📜 License
-This repository contains my personal solutions and projects from CS50x.
-All code follows ***CS50’s academic honesty policy*** and is meant for ***learning purposes only***.
+📽 **Video Demo:** [Watch on YouTube](https://youtu.be/c2erWba9aRU)  
+
+### ▌ Project Overview
+MyRecipes is a web application designed to allow users to **create, share, and discover culinary recipes**. It provides a user-friendly platform where people can explore a variety of dishes without the need for prior registration.  
+
+This project was developed in collaboration with **Diego Agudelo** and **Ralph Balazs**, both students at **42 School Paris**.
+
+### ▌ Features
+✔ **User-friendly recipe management**: Users can easily modify their recipes while retaining original data.  
+✔ **Categorization**: Recipes are classified into three main categories:
+   - **Culinary Arts**: Main dishes and starters  
+   - **Bakery**: Bread and baked goods  
+   - **Pastry**: Desserts and sweet treats  
+✔ **Admin Panel**:  
+   - Manage user accounts (**Admin login**: admin | **Password**: 12345)  
+✔ **Security Measures**:  
+   - Password encryption for user safety  
+   - Password recovery system based on first and last name  
+   - Profile customization  
+
+### ▌ Demo Credentials  
+To test the application, you can use the following credentials:  
+
+**User 1:**  
+Username: Maite  
+Password: 12  
+
+**User 2:**  
+Username: test  
+Password: 123  
+
+### ▌ Development Challenges  
+🔴 **Email System**: We attempted to integrate an SMTP-based password recovery system but faced difficulties with free online services. Google’s SMTP services were also not viable.  
+🔴 **Design Issues**: Our initial designs were made in Adobe XD, but exporting to HTML required multiple conversions through **Figma**, leading to additional manual adjustments.  
+🔴 **Flask GET/POST Handling**: We faced challenges understanding the complexity of handling user inputs and database interactions properly.  
+
+### ▌ Future Improvements  
+🔹 Implement password recovery via email  
+🔹 Allow users to comment on and rate recipes  
+🔹 Enforce stronger password security rules (special characters, numbers, length restrictions)  
+🔹 Optimize database storage by limiting text field character count  
+🔹 Enhance the **recipe display UI** for a better user experience (smartphone-style icons, subcategories, etc.)  
+🔹 Improve SEO for better search visibility  
+
+## ▌ Installation & Usage
+1️⃣ **Clone the repository**
+```sh
+git clone https://github.com/ai-dg/cs50x.git  
+cd cs50x
+```  
+
+2️⃣ Run problem sets or projects  
+```sh
+make [filename]  
+./[filename]  
+```
+
+## 📜 License
+This repository contains my personal solutions and projects from CS50x.  
+All code follows **CS50’s academic honesty policy** and is meant for **learning purposes only**.  
