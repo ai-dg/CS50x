@@ -40,9 +40,9 @@ Through hands-on problem sets and projects, students develop strong problem-solv
 📽 **Video Demo:** [Watch on YouTube](https://youtu.be/c2erWba9aRU)  
 
 ### ■ Project Overview
-MyRecipes is a web application designed to allow users to **create, share, and discover culinary recipes**. It provides a user-friendly platform where people can explore a variety of dishes without the need for prior registration.  
+MyRecipes is a web application (in Python, Flask) designed to allow users to **create, share, and discover culinary recipes**. It provides a user-friendly platform where people can explore a variety of dishes without the need for prior registration.  
 
-This project was developed in collaboration with **Diego Agudelo** and **Ralph Balazs**, both students at **42 School Paris**.
+This project was developed in collaboration with **Diego Agudelo** and **Ralph Balazs**(https://github.com/MortalTrex), both students at **42 School Paris**.
 
 ### ■ Features
 ✔ **User-friendly recipe management**: Users can easily modify their recipes while retaining original data.  
