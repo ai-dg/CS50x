@@ -3,8 +3,7 @@
 <img src="https://github.com/user-attachments/assets/7cf6465c-dd18-471d-b403-41bf084e8341" width="500">
 
 ## Certificate obtained
-
-<img src="https://github.com/user-attachments/assets/ac4fb3c8-4d95-4afb-bbd8-699e1a3faef5" width="500">
+https://certificates.cs50.io/?size=A4
 
 ![Course Completed](https://img.shields.io/badge/Completed-✅-brightgreen)  
 📌 **Harvard University's CS50x - Intro to Computer Science**  
