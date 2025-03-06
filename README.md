@@ -84,13 +84,7 @@ Password: 123
 ```sh
 git clone https://github.com/ai-dg/cs50x.git  
 cd cs50x
-```  
-
-2️⃣ Run problem sets or projects  
-```sh
-make [filename]  
-./[filename]  
-```
+``` 
 
 ## 📜 License
 This repository contains my personal solutions and projects from CS50x.  
