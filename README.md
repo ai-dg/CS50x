@@ -35,14 +35,16 @@ Through hands-on problem sets and projects, students develop strong problem-solv
 
 ## ▌ Final Project: MyRecipes Web Application
 
+<img src="https://github.com/user-attachments/assets/a49604b2-799d-44a6-ba20-acb17432c701" width="500">
+
 📽 **Video Demo:** [Watch on YouTube](https://youtu.be/c2erWba9aRU)  
 
-### ▌ Project Overview
+### ■ Project Overview
 MyRecipes is a web application designed to allow users to **create, share, and discover culinary recipes**. It provides a user-friendly platform where people can explore a variety of dishes without the need for prior registration.  
 
 This project was developed in collaboration with **Diego Agudelo** and **Ralph Balazs**, both students at **42 School Paris**.
 
-### ▌ Features
+### ■ Features
 ✔ **User-friendly recipe management**: Users can easily modify their recipes while retaining original data.  
 ✔ **Categorization**: Recipes are classified into three main categories:
    - **Culinary Arts**: Main dishes and starters  
@@ -55,7 +57,7 @@ This project was developed in collaboration with **Diego Agudelo** and **Ralph B
    - Password recovery system based on first and last name  
    - Profile customization  
 
-### ▌ Demo Credentials  
+### ■ Demo Credentials  
 To test the application, you can use the following credentials:  
 
 **User 1:**  
@@ -66,12 +68,12 @@ Password: 12
 Username: test  
 Password: 123  
 
-### ▌ Development Challenges  
+### ■ Development Challenges  
 🔴 **Email System**: We attempted to integrate an SMTP-based password recovery system but faced difficulties with free online services. Google’s SMTP services were also not viable.  
 🔴 **Design Issues**: Our initial designs were made in Adobe XD, but exporting to HTML required multiple conversions through **Figma**, leading to additional manual adjustments.  
 🔴 **Flask GET/POST Handling**: We faced challenges understanding the complexity of handling user inputs and database interactions properly.  
 
-### ▌ Future Improvements  
+### ■ Possible Improvements  
 🔹 Implement password recovery via email  
 🔹 Allow users to comment on and rate recipes  
 🔹 Enforce stronger password security rules (special characters, numbers, length restrictions)  
@@ -84,7 +86,19 @@ Password: 123
 ```sh
 git clone https://github.com/ai-dg/cs50x.git  
 cd cs50x
-``` 
+```
+
+### ■ Installing final project
+▸ Installing dependencies:
+```sh
+pip install flask
+pip install flask_mail
+pip install flask_session
+pip install cs50
+flask run in the folder /Week 10/Final Project/project
+```
+
+
 
 ## 📜 License
 This repository contains my personal solutions and projects from CS50x.  
