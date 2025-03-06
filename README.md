@@ -4,8 +4,6 @@
 
 ## Certificate obtained
 
-<img src="https://github.com/user-attachments/assets/8b984975-453f-4d42-83ec-54f646e28c7f" width="500">
-
 🔗 [Verify my certificate](https://cs50.harvard.edu/certificates/25f74edd-79df-4ae1-bcd0-5a0180d473ab)
 
 ![Course Completed](https://img.shields.io/badge/Completed-✅-brightgreen)  
