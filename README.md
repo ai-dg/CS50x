@@ -1,6 +1,6 @@
-# CS50x - Introduction to Computer Science
+# CS50x (2023) - Introduction to Computer Science
 
-<img src="https://cs50.harvard.edu/images/cs50x.png" width="500">
+<img src="https://github.com/user-attachments/assets/1cb2d95b-e43a-42a8-9dbc-2139700dae25" width="500">
 
 ![Course Completed](https://img.shields.io/badge/Completed-✅-brightgreen)  
 📌 **Harvard University's CS50x - Intro to Computer Science**  
